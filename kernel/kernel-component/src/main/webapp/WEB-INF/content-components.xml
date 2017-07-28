@@ -125,6 +125,7 @@
         <property name="outputFilters">
             <list>
                 <ref bean="org.sakaiproject.content.impl.HtmlPageFilter"/>
+                <ref bean="org.sakaiproject.content.impl.CourseContextFilter"/>
             </list>
         </property>
     </bean>
@@ -256,6 +257,10 @@
                   class="org.sakaiproject.content.impl.HtmlPageFilter">
               <property name="entityManager" ref="org.sakaiproject.entity.api.EntityManager"/>
               <property name="serverConfigurationService" ref="org.sakaiproject.component.api.ServerConfigurationService"/>
+            </bean>
+
+            <bean id="org.sakaiproject.content.impl.CourseContextFilter"
+                  class="org.sakaiproject.content.impl.CourseContextFilter">
             </bean>
 
 </beans>
